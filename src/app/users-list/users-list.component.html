@@ -1,0 +1,15 @@
+<h1>Lista usera</h1>
+<button (click)="dodaj()">Dodaj usera</button>
+<br>
+<div *ngFor="let user of useri">
+  <div class="user-card">
+     
+    <h2>Username: {{ user.username }}</h2>
+    <h2>  Email: {{ user.email }}</h2>
+    <p>ID: {{ user.id }} </p>
+    <p>Rola: {{ user.rola }} </p>
+    <button (click)="viewDetails(user.id)">Pregledaj Detalje</button>
+    <button (click)="deleteUser(user.id)">Obriši</button>
+    <button (click)="editUser(user.id)">Ažuriraj</button>
+  </div>
+</div>

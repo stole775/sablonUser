@@ -1,0 +1,22 @@
+<h2>Edit User</h2>
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" id="username" formControlName="username" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" id="email" formControlName="email" required>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="text" password="password" formControlName="password" required>
+  </div>
+  <div class="form-group">
+    <label for="rola">Rola</label>
+    <input type="text" id="rola" formControlName="rola" required>
+  </div>
+  <button type="submit" [disabled]="!userForm.valid">Azuriraj</button>
+</form>
+<button (click)="povratak()">Povratak</button>
